@@ -40,5 +40,11 @@ printf("mprotect Error\n");return -1;
 }
 
 getchar();
+ret=munmap(p,4096*3);
+if(ret<0)
+{
+	printf("munmap failed..\n");
+	return -1;
+}
 return 0;
 }
